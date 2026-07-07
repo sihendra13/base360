@@ -157,7 +157,7 @@ export default function StoryCard({ panel, relativeScroll, globalProgress }) {
       {/* 1. Video Latar Belakang & TikTok UI */}
       <div style={{ position: 'absolute', inset: 0, borderRadius: '24px', overflow: 'hidden', zIndex: 0, boxShadow: '0 20px 40px rgba(0,0,0,0.5)' }}>
         <video 
-          src="/burger eat.mp4" 
+          src="/burger-eat.mp4" 
           autoPlay loop muted playsInline
           style={{
             position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover',

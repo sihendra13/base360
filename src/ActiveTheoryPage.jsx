@@ -23,7 +23,7 @@ export default function ActiveTheoryPage({ heroMode }) {
       {/* 2. GLOBAL BACKGROUND: Green Video */}
       {showGreen && (
         <video 
-          src="/lightin green.mp4" 
+          src="/lightin-green.mp4" 
           autoPlay loop muted playsInline 
           style={{ position: 'fixed', inset: 0, width: '100vw', height: '100vh', objectFit: 'cover', zIndex: 0 }} 
         />
