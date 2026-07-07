@@ -2,15 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { motion, useMotionValueEvent, useMotionValue, useTransform } from 'framer-motion';
 
 // Import SVG & Images secara langsung agar Vite mem-bundlenya
-import loveIcon from '../public/svg/love.svg';
-import komenIcon from '../public/svg/komen.svg';
-import forwardIcon from '../public/svg/forward.svg';
-import homeIcon from '../public/svg/home.svg';
-import discoverIcon from '../public/svg/discover.svg';
-import postIcon from '../public/svg/post.svg';
-import inboxIcon from '../public/svg/inbox.svg';
-import profileIcon from '../public/svg/profile.svg';
-import addUserIcon from '../public/svg/add user2.svg';
+import loveIcon from '../public/SVG/love.svg';
+import komenIcon from '../public/SVG/komen.svg';
+import forwardIcon from '../public/SVG/forward.svg';
+import homeIcon from '../public/SVG/home.svg';
+import discoverIcon from '../public/SVG/discover.svg';
+import postIcon from '../public/SVG/post.svg';
+import inboxIcon from '../public/SVG/inbox.svg';
+import profileIcon from '../public/SVG/profile.svg';
+import addUserIcon from '../public/SVG/add user2.svg';
 import userProfileImg from '../public/user_Profile.jpg';
 import userAiImg from '../public/user_ai.jpg';
 
