@@ -1,17 +1,22 @@
-import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import React, { useRef, useEffect, useState } from 'react';
+import { motion, useInView } from 'framer-motion';
 
 export default function FooterCTA() {
   const containerRef = useRef(null);
   
-  // Animate solid white text opacity based on scroll
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start 90%", "center center"] 
-  });
-  
-  // Fades from 0 (video mask visible) to 1 (solid white text)
-  const whiteTextOpacity = useTransform(scrollYProgress, [0.3, 1], [0, 1]);
+  // Deteksi ketika Footer ini masuk ke dalam layar
+  const isInView = useInView(containerRef, { once: false, margin: "-20% 0px" });
+  const [showSolidText, setShowSolidText] = useState(false);
+
+  // Ketika masuk layar, tunggu 1.5 detik (menampilkan video mask), lalu ubah state untuk menampilkan teks putih
+  useEffect(() => {
+    if (isInView) {
+      const timer = setTimeout(() => setShowSolidText(true), 1500);
+      return () => clearTimeout(timer);
+    } else {
+      setShowSolidText(false);
+    }
+  }, [isInView]);
 
   return (
     <section ref={containerRef} style={{ 
@@ -54,13 +59,18 @@ export default function FooterCTA() {
             }}
           />
 
-          {/* 4. Solid Glowing White Text (Fades in over the video as user scrolls) */}
-          <motion.h2 style={{ 
-            position: 'absolute', inset: 0,
-            fontSize: '6vw', fontWeight: 900, color: '#fff', margin: 0, 
-            letterSpacing: '-1px', opacity: whiteTextOpacity,
-            textShadow: '0 0 40px rgba(255,255,255,0.6)'
-          }}>
+          {/* 4. Solid Glowing White Text (Fades in over the video after delay) */}
+          <motion.h2 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: showSolidText ? 1 : 0 }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
+            style={{ 
+              position: 'absolute', inset: 0,
+              fontSize: '6vw', fontWeight: 900, color: '#fff', margin: 0, 
+              letterSpacing: '-1px',
+              textShadow: '0 0 40px rgba(255,255,255,0.6)'
+            }}
+          >
             Ready to Automate?
           </motion.h2>
 
