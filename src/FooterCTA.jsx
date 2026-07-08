@@ -80,26 +80,28 @@ export default function FooterCTA() {
         </div>
         
         <div style={{ display: 'flex', gap: '24px', justifyContent: 'center' }}>
-          {/* Tombol Utama */}
-          <button style={{
-            background: '#00F0FF',
-            color: '#000',
-            border: 'none', borderRadius: '8px',
-            padding: '16px 40px', fontSize: '18px', fontWeight: 'bold',
-            cursor: 'pointer', outline: 'none',
-            boxShadow: '0 0 20px rgba(0, 240, 255, 0.4)',
-            transition: 'transform 0.2s ease, box-shadow 0.2s ease'
-          }}
-          onMouseOver={(e) => { 
-            e.currentTarget.style.transform = 'scale(1.05)'; 
-            e.currentTarget.style.boxShadow = '0 0 30px rgba(0, 240, 255, 0.6)'; 
-          }}
-          onMouseOut={(e) => { 
-            e.currentTarget.style.transform = 'scale(1)'; 
-            e.currentTarget.style.boxShadow = '0 0 20px rgba(0, 240, 255, 0.4)'; 
-          }}>
-            Book Live Demo
-          </button>
+          {/* Tombol Utama (Bercahaya & Berdenyut seperti Hero) */}
+          <motion.button 
+            animate={{ scale: [1, 1.05, 1], boxShadow: ['0 0 20px rgba(0, 240, 255, 0.4)', '0 0 40px rgba(0, 240, 255, 0.8)', '0 0 20px rgba(0, 240, 255, 0.4)'] }}
+            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+            whileHover={{ scale: 1.1, boxShadow: '0 0 50px rgba(0, 240, 255, 1)' }}
+            style={{
+              background: '#00F0FF',
+              color: '#000',
+              border: 'none', borderRadius: '8px',
+              padding: '16px 40px', fontSize: '18px', fontWeight: 'bold',
+              cursor: 'pointer', outline: 'none',
+              display: 'flex', alignItems: 'center', gap: '8px'
+            }}
+          >
+            <span>Book Live Demo</span>
+            <motion.span
+              animate={{ x: [0, 6, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+            >
+              →
+            </motion.span>
+          </motion.button>
         </div>
       </div>
 
