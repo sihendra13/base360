@@ -8,10 +8,10 @@ export default function FooterCTA() {
   const isInView = useInView(containerRef, { once: false, margin: "-20% 0px" });
   const [showSolidText, setShowSolidText] = useState(false);
 
-  // Ketika masuk layar, tunggu 1.5 detik (menampilkan video mask), lalu ubah state untuk menampilkan teks putih
+  // Ketika masuk layar, tunggu 6 detik (menampilkan video mask), lalu ubah state untuk menampilkan teks putih
   useEffect(() => {
     if (isInView) {
-      const timer = setTimeout(() => setShowSolidText(true), 1500);
+      const timer = setTimeout(() => setShowSolidText(true), 6000);
       return () => clearTimeout(timer);
     } else {
       setShowSolidText(false);
@@ -30,7 +30,10 @@ export default function FooterCTA() {
       <div style={{ textAlign: 'center', zIndex: 2, width: '100%' }}>
         
         {/* TEXT MASK CONTAINER */}
-        <div style={{ position: 'relative', display: 'inline-block', marginBottom: '40px', backgroundColor: '#000' }}>
+        <div style={{ 
+          position: 'relative', display: 'inline-block', marginBottom: '40px', 
+          backgroundColor: '#000', padding: '0 20px', overflow: 'hidden' 
+        }}>
           
           {/* 1. Base Text (Invisible, just to give the container physical size) */}
           <h2 style={{ 
@@ -63,12 +66,12 @@ export default function FooterCTA() {
           <motion.h2 
             initial={{ opacity: 0 }}
             animate={{ opacity: showSolidText ? 1 : 0 }}
-            transition={{ duration: 1.5, ease: "easeInOut" }}
+            transition={{ duration: 3, ease: "easeInOut" }}
             style={{ 
               position: 'absolute', inset: 0,
               fontSize: '6vw', fontWeight: 900, color: '#fff', margin: 0, 
               letterSpacing: '-1px',
-              textShadow: '0 0 40px rgba(255,255,255,0.6)'
+              textShadow: '0 0 40px rgba(255,255,255,0.8)'
             }}
           >
             Ready to Automate?
