@@ -139,15 +139,26 @@ export default function Journey({ heroMode = 'hero-a', enteredTunnel, setEntered
 
   const isOptionB = heroMode === 'hero-b';
   const containerHeight = (isOptionB && !enteredTunnel) ? '100vh' : '600vh';
-  const tunnelProgress = useTransform(scrollYProgress, [0, 1], [0, 5/6], { clamp: true });
+  
+  // Map scrollYProgress to tunnelProgress, starting slightly after 0 so user can scroll UP to exit
+  const tunnelProgress = useTransform(scrollYProgress, [0.05, 1], [0, 5/6], { clamp: true });
   const tunnelContainerOpacity = useMotionValue(1);
 
   // Jika user scroll kembali mentok ke atas, kembalikan ke layar Hero
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    if (latest === 0 && enteredTunnel && isOptionB) {
+    if (latest <= 0.01 && enteredTunnel && isOptionB) {
       setEnteredTunnel(false);
+      window.scrollTo({ top: 0, behavior: 'instant' });
     }
   });
+
+  const handleEnter = () => {
+    setEnteredTunnel(true);
+    // Force scroll down slightly so tunnelProgress starts exactly at 0 (Card 1)
+    setTimeout(() => {
+      window.scrollTo({ top: window.innerHeight * 0.25, behavior: 'instant' });
+    }, 20);
+  };
 
   return (
     <section ref={containerRef} style={{ position: 'relative', height: containerHeight, background: 'transparent', zIndex: 10 }}>
@@ -177,7 +188,7 @@ export default function Journey({ heroMode = 'hero-a', enteredTunnel, setEntered
 
         <AnimatePresence>
           {isOptionB && !enteredTunnel && (
-            <HeroStaticLanding onEnter={() => setEnteredTunnel(true)} />
+            <HeroStaticLanding onEnter={handleEnter} />
           )}
         </AnimatePresence>
 
