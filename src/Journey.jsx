@@ -59,7 +59,7 @@ function HeroStaticLanding({ onEnter }) {
       </h1>
 
       {/* Sub-headline */}
-      <p style={{ color: '#94a3b8', fontSize: '1.2vw', maxWidth: '650px', lineHeight: 1.6, marginBottom: '50px' }}>
+      <p style={{ color: '#fff', fontSize: '1.2vw', maxWidth: '650px', lineHeight: 1.6, marginBottom: '50px', textShadow: '0 2px 10px rgba(0,0,0,0.8)' }}>
         Automate replies, qualify leads, and place sales calls across every social channel. Focus on growth, not inbox management.
       </p>
 
