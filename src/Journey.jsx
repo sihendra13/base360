@@ -25,6 +25,21 @@ function HeroStaticLanding({ onEnter }) {
         padding: '0 20px', textAlign: 'center'
       }}
     >
+      {/* Video Background dengan Overlay Gelap & Gradasi Bawah */}
+      <div style={{ position: 'absolute', inset: 0, zIndex: -1, overflow: 'hidden' }}>
+        <video 
+          src="/Hero_Image_ok.mp4" 
+          autoPlay loop muted playsInline
+          style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.15 }}
+        />
+        <div style={{ 
+          position: 'absolute', 
+          bottom: 0, left: 0, right: 0, 
+          height: '50vh', 
+          background: 'linear-gradient(to bottom, rgba(10,15,29,0) 0%, rgba(10,15,29,1) 100%)' 
+        }} />
+      </div>
+
       {/* Badge Atas */}
       <div style={{
         border: '1px solid rgba(0, 240, 255, 0.3)', borderRadius: '20px',
