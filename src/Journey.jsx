@@ -30,7 +30,7 @@ function HeroStaticLanding({ onEnter }) {
         <video 
           src="/Hero_Image_ok.mp4" 
           autoPlay loop muted playsInline
-          style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.15 }}
+          style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.45 }}
         />
         <div style={{ 
           position: 'absolute', 
