@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Internal strategy doc (repo is public)
+PRODUCT_VISION_BACKLOG.md
+RISET_KOMPETITOR.md
