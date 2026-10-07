@@ -8,10 +8,10 @@ export default function FooterCTA() {
   const isInView = useInView(containerRef, { once: false, margin: "-20% 0px" });
   const [showSolidText, setShowSolidText] = useState(false);
 
-  // Ketika masuk layar, tunggu 6 detik (menampilkan video mask), lalu ubah state untuk menampilkan teks putih
+  // Ketika masuk layar, tunggu 4 detik (menampilkan video mask), lalu ubah state untuk menampilkan teks putih selamanya
   useEffect(() => {
     if (isInView) {
-      const timer = setTimeout(() => setShowSolidText(true), 6000);
+      const timer = setTimeout(() => setShowSolidText(true), 4000);
       return () => clearTimeout(timer);
     } else {
       setShowSolidText(false);
@@ -62,7 +62,7 @@ export default function FooterCTA() {
             }}
           />
 
-          {/* 4. Solid Glowing White Text (Fades in over the video after delay) */}
+          {/* 4. Solid Glowing White Text (Fades in once over the video after delay) */}
           <motion.h2 
             initial={{ opacity: 0 }}
             animate={{ opacity: showSolidText ? 1 : 0 }}
