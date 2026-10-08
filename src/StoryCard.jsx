@@ -217,7 +217,7 @@ export default function StoryCard({ panel, relativeScroll, globalProgress }) {
                   <img src={userAiImg} alt="AI Agent" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
                 <div>
-                  <p style={{ margin: 0, fontSize: '13px', color: '#00F0FF', fontWeight: 'bold' }}>Base360 AI <span style={{ background: '#00F0FF', color: '#000', padding: '2px 6px', borderRadius: '4px', fontSize: '10px', marginLeft: '4px' }}>Author</span></p>
+                  <p style={{ margin: 0, fontSize: '13px', color: '#00F0FF', fontWeight: 'bold' }}>Matur360 AI <span style={{ background: '#00F0FF', color: '#000', padding: '2px 6px', borderRadius: '4px', fontSize: '10px', marginLeft: '4px' }}>Author</span></p>
                   <p style={{ margin: '4px 0 0', fontSize: '15px', color: '#fff', minHeight: '60px', display: 'block' }}>
                     <TypewriterText text="It's $8! I've sent you a DM with the menu and a special discount link! 🍔🚀" delay={200} relativeScroll={relativeScroll} />
                   </p>
@@ -288,7 +288,7 @@ export default function StoryCard({ panel, relativeScroll, globalProgress }) {
               {panel.title} <span style={{fontSize: '14px', color: '#00F0FF', display: 'block'}}>{panel.desc}</span>
             </h3>
             <motion.div animate={floatAnim} style={{ width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', background: 'rgba(15, 23, 42, 0.7)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', padding: '30px 20px', borderRadius: '16px', border: '1px solid rgba(255, 255, 255, 0.2)', boxShadow: '0 20px 40px rgba(0,0,0,0.8)' }}>
-              <div style={{ fontSize: '24px', color: '#fff', fontWeight: 'bold', marginBottom: '8px' }}>Base360 AI</div>
+              <div style={{ fontSize: '24px', color: '#fff', fontWeight: 'bold', marginBottom: '8px' }}>Matur360 AI</div>
               <div style={{ fontSize: '14px', color: '#aaa', marginBottom: '40px' }}>Calling to confirm order...</div>
               
               <div style={{ position: 'relative', width: '100px', height: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

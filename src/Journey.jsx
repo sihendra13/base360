@@ -4,7 +4,7 @@ import StoryCard from './StoryCard';
 
 const panels = [
   { id: 1, title: "The Hook", desc: "Capturing incoming social leads", video: "/burger-eat.mp4" },
-  { id: 2, title: "AI Takeover", desc: "Base360 replies instantly", video: "/video.mp4" },
+  { id: 2, title: "AI Takeover", desc: "Matur360 replies instantly", video: "/video.mp4" },
   { id: 3, title: "Closing in DMs", desc: "24/7 automated conversational sales", video: "/video.mp4" },
   { id: 4, title: "Smart CRM", desc: "Instantly saves the contact as a high-intent lead.", video: "/video.mp4" },
   { id: 5, title: "AI Voice Call", desc: "The AI places a real call to walk them through the product.", video: "/video.mp4" },

@@ -187,7 +187,7 @@ function ScreenContent({ index }) {
           style={{ position: 'absolute', inset: 0, top: '40%', background: 'rgba(28,28,30,0.95)', backdropFilter: 'blur(30px)', borderTopLeftRadius: '30px', borderTopRightRadius: '30px', padding: '24px 16px', zIndex: 20, borderTop: '1px solid rgba(255,255,255,0.1)' }}
         >
           <div style={{ width: '40px', height: '5px', background: '#555', borderRadius: '3px', margin: '0 auto 20px' }} />
-          <h3 style={{ textAlign: 'center', fontSize: '17px', fontWeight: '600', marginBottom: '24px' }}>Base360 AI Active</h3>
+          <h3 style={{ textAlign: 'center', fontSize: '17px', fontWeight: '600', marginBottom: '24px' }}>Matur360 AI Active</h3>
           
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             <div style={{ background: '#0a84ff', color: '#fff', padding: '12px 16px', borderRadius: '20px 20px 4px 20px', alignSelf: 'flex-end', maxWidth: '85%', fontSize: '15px' }}>
@@ -215,7 +215,7 @@ function ScreenContent({ index }) {
               Yes please! Does it come with free shipping?
             </div>
             <div style={{ background: '#0a84ff', color: '#fff', padding: '12px 16px', borderRadius: '20px 20px 4px 20px', alignSelf: 'flex-end', maxWidth: '85%', fontSize: '15px' }}>
-              Yes, free express shipping worldwide! Here is your secure checkout link: base360.co/vip-sarah
+              Yes, free express shipping worldwide! Here is your secure checkout link: matur360.id/vip-sarah
             </div>
           </div>
         </motion.div>
@@ -252,7 +252,7 @@ function ScreenContent({ index }) {
             <span style={{ fontSize: '40px' }}>🎙️</span>
           </div>
           <h2 style={{ fontSize: '28px', fontWeight: '400', marginBottom: '8px' }}>Calling Sarah...</h2>
-          <p style={{ color: '#0a84ff', fontSize: '17px' }}>Base360 Voice Agent</p>
+          <p style={{ color: '#0a84ff', fontSize: '17px' }}>Matur360 Voice Agent</p>
         </motion.div>
       )}
 
@@ -268,7 +268,7 @@ function ScreenContent({ index }) {
               $149.00
             </h1>
             <h2 style={{ fontSize: '20px', fontWeight: '500', color: '#fff' }}>Payment Received</h2>
-            <p style={{ color: '#86868b', fontSize: '15px', marginTop: '8px' }}>Automated via Base360</p>
+            <p style={{ color: '#86868b', fontSize: '15px', marginTop: '8px' }}>Automated via Matur360</p>
           </div>
         </motion.div>
       )}

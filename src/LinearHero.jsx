@@ -34,7 +34,7 @@ export default function LinearHero() {
           textTransform: 'uppercase',
           color: '#888'
         }}>
-          Base360 — New Generation
+          Matur360 — New Generation
         </div>
         
         <h1 style={{ 

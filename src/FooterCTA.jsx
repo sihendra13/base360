@@ -111,7 +111,7 @@ export default function FooterCTA() {
         display: 'flex', justifyContent: 'space-between', padding: '0 60px', 
         fontSize: '12px', color: '#666', letterSpacing: '2px', fontWeight: 'bold', zIndex: 2 
       }}>
-        <div>© 2026 BASE360 | All Right Reserved | Hendra Fitriadi | nilakayuwangi@gmail.com</div>
+        <div>© 2026 MATUR360 | All Right Reserved | Hendra Fitriadi | nilakayuwangi@gmail.com</div>
         <div style={{ display: 'flex', gap: '30px' }}>
           <span style={{ cursor: 'pointer', transition: 'color 0.3s' }} onMouseOver={e => e.currentTarget.style.color = '#fff'} onMouseOut={e => e.currentTarget.style.color = '#666'}>LINKEDIN</span>
           <span style={{ cursor: 'pointer', transition: 'color 0.3s' }} onMouseOver={e => e.currentTarget.style.color = '#fff'} onMouseOut={e => e.currentTarget.style.color = '#666'}>TWITTER</span>

@@ -14,10 +14,10 @@ export default function CarouselJourney() {
   // Putaran Ekstrem 360 Derajat
   const rotationY = useTransform(scrollYProgress, [0, 1], [0, -360]);
 
-  // Data 6 panel (cerita Base360) menggunakan video lokal yang anti-gagal
+  // Data 6 panel (cerita Matur360) menggunakan video lokal yang anti-gagal
   const panels = [
     { id: 1, title: "The Hook", desc: "TikTok comment masuk", video: "/video.mp4" },
-    { id: 2, title: "AI Takeover", desc: "Base360 membalas otomatis", video: "/video.mp4" },
+    { id: 2, title: "AI Takeover", desc: "Matur360 membalas otomatis", video: "/video.mp4" },
     { id: 3, title: "Closing in DMs", desc: "AI bertindak sebagai CS", video: "/video.mp4" },
     { id: 4, title: "Data Captured", desc: "Lead masuk ke CRM", video: "/video.mp4" },
     { id: 5, title: "Voice Agent", desc: "AI menelpon pelanggan", video: "/video.mp4" },

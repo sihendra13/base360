@@ -20,7 +20,7 @@ export default function AppleHero() {
         transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
         style={{ zIndex: 1 }}
       >
-        <h2 style={{ fontSize: '24px', fontWeight: '500', color: '#f5f5f7', marginBottom: '8px' }}>Base360 Pro</h2>
+        <h2 style={{ fontSize: '24px', fontWeight: '500', color: '#f5f5f7', marginBottom: '8px' }}>Matur360 Pro</h2>
         
         <h1 style={{ 
           fontSize: 'clamp(50px, 8vw, 120px)', 
